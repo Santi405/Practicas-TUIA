@@ -73,6 +73,7 @@ def quinto():
 #6
 def sexto():
     birthDate = input("Ingrese su fecha de nacimiento (MM/DD): ")
+
     if birthDate <= "1/20":
         print("Eres de capricornio ♑")
     elif birthDate >= "1/21" and birthDate <= "2/18":
@@ -103,7 +104,6 @@ def sexto():
 
 
 def sexto2():
-    # Preguntar al usuario su fecha de cumpleaños
     birthDate = input("Ingrese la fecha de su nacimiento: ")
     dia = int(birthDate[0:2])
     mes = int(birthDate[3:5])
@@ -136,13 +136,125 @@ def sexto2():
         print("Por favor, intente de nuevo")
 
     print("Tu numero zodiacal es:", signo_zodiacal)
-
     sexto2()
 
-    
+
+#7
+
+def septimo():
+    zona = input("Ingrese la zona en la que estaba estacionado: ")
+    hora = int(input("Ingrese cantidad de horas que estuvo estacionado: "))
+    zona = zona.upper()
+
+    if zona == "A":
+        if hora == 1:
+            print("El costo de estacionamiento es $57.")
+        elif hora == 2:
+            print("El costo de estacionamiento es $71,2.")
+        elif hora == 3:
+            print("El costo de estacionamiento es $85,5.")
+    elif zona == "B":
+        if hora == 1:
+            print("El costo de estacionamiento es $47.")
+        elif hora == 2:
+            print("El costo de estacionamiento es $58,7.")
+        elif hora == 3:
+            print("El costo de estacionamiento es $70,5.")
+    elif zona == "C":
+        if hora == 1:
+            print("El costo de estacionamiento es $37.")
+        elif hora == 2:
+            print("El costo de estacionamiento es $46,2.")
+        elif hora == 3:
+            print("El costo de estacionamiento es $55,5.")
+    else:
+        print("Error, intente de nuevo")
+        septimo()
+
+def octavo():
+    item = input("Ingrese el item del producto: ")
+    local = input("Ingrese la sede del local de ventas: ")
+    item = item.capitalize()
+    local = local.capitalize()
+
+    if local == "Rosario":
+        if item == "Zapatillas":
+            print("El descuento es de 30% 👟")
+        elif item == "Remeras":
+            print("El descuento es de 20% 👕")
+        elif item == "Pantalones":
+            print("El descuento es de 10% 👖")
+    elif local == "Funes":
+        if item == "Zapatillas":
+            print("El descuento es de 40% 👟")
+        elif item == "Remeras":
+            print("El descuento es de 30% 👕")
+        elif item == "Pantalones":
+            print("El descuento es de 5% 👖")
+    elif local == "Roldán":
+        if item == "Zapatillas":
+            print("El descuento es de 25% 👟")
+        elif item == "Remeras":
+            print("El descuento es de 15% 👕")
+        elif item == "Pantalones":
+            print("El descuento es de 20% 👖")
+    else: 
+        print("ERROR, vuelva a intentarlo")
+        octavo()
+
+
+def noveno():
+    item = input("Ingrese el item del producto: ")
+    local = input("Ingrese la sede del local de ventas: ")
+    dia = input("Ingrese el día de compra: ")
+    item = item.capitalize()
+    local = local.capitalize()
+    dia = dia.capitalize()
+
+    if dia == "Lunes":
+        descuento = 10
+    elif dia == "Miercoles" or dia == "Miercolés":
+        descuento = 8
+    elif dia == "Jueves":
+        descuento = 5
 
     
+    if local == "Rosario":
+        if item == "Zapatillas":
+            descuento += 30
+            print("El descuento es de " + str(descuento)  +"% 👟")
+        elif item == "Remeras":
+            descuento += 20
+            print("El descuento es de " + str(descuento) +"% 👕")
+        elif item == "Pantalones":
+            descuento += 10
+            print("El descuento es de " + str(descuento) + "% 👖")
+    elif local == "Funes":
+        if item == "Zapatillas":
+            descuento += 40
+            print("El descuento es de " + str(descuento)  +"% 👟")
+        elif item == "Remeras":
+            descuento += 30
+            print("El descuento es de " + str(descuento) +"% 👕")
+        elif item == "Pantalones":
+            descuento += 5
+            print("El descuento es de " + str(descuento) + "% 👖")
+    elif local == "Roldán" or local == "Roldan":
+        if item == "Zapatillas":
+            descuento += 25
+            print("El descuento es de " + str(descuento)  +"% 👟")
+        elif item == "Remeras":
+            descuento += 15
+            print("El descuento es de " + str(descuento) +"% 👕")
+        elif item == "Pantalones":
+            descuento += 5
+            print("El descuento es de " + str(descuento) + "% 👖")
+    else: 
+        print("ERROR, vuelva a intentarlo")
+        noveno()
 
 
-sexto2()
+noveno()
 
+
+        
