@@ -135,10 +135,10 @@ def sexto2():
     else:
         print("Por favor, intente de nuevo")
 
-    print("Tu numero zodiacal es:", signo_zodiacal)
+    print(f"Tu numero zodiacal es: {signo_zodiacal}")
     sexto2()
 
-
+sexto2()
 #7
 
 def septimo():
@@ -250,11 +250,10 @@ def noveno():
             descuento += 5
             print("El descuento es de " + str(descuento) + "% 👖")
     else: 
-        print("ERROR, vuelva a intentarlo")
+        print("ERROR, vuelva a intentar")
         noveno()
 
 
-noveno()
 
 
         
