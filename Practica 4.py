@@ -71,7 +71,7 @@ def decimo():
     secuencia = input("Ingrese la secuencia de valores (sin corchete, separado por coma): ")
     suma = 0
     
-    secuencia = list(secuencia.split(","))
+    secuencia = secuencia.split(",")
 
     for i in secuencia:
         if (suma + int(i)) > umbral:
@@ -79,6 +79,42 @@ def decimo():
         suma += int(i)
     print("La suma es: " + str(suma))
 
+
 #11
 def onceavo():
+    secuencia = input("Ingrese la secuencia de valores (sin corchete, separado por coma): ")
+    secuencia = secuencia.split(",")
+    suma = 0
+    for i in secuencia:
+        if not int(i) % 2 == 0:
+            continue
+        suma += int(i)
+    print(f"La suma total es igual a: {suma} en total")
 
+
+#12
+def doceavo():
+    while True:
+        entero = input("Ingrese un numero entero o 'salir' para terminar: ")
+        if entero.lower == "salir":
+            break
+        suma = 0
+        for i in range(int(entero)):
+                suma += i
+        print(f"La suma total es: {suma}")
+
+#13
+def treceavo():
+    billeteGrosor = 0.00011
+    alturaMonu = 70
+    alturaSuma = 0
+    totalBilletes = 0
+
+    while alturaSuma <= alturaMonu:
+        alturaSuma += billeteGrosor
+        totalBilletes = totalBilletes + 1
+    totalMeses = totalBilletes // 30.5
+    totalAños = totalBilletes // 365.25
+    print(f"Deben pasar {totalBilletes} días \n{totalMeses} meses \n{totalAños} años")
+
+#14
