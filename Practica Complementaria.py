@@ -219,4 +219,25 @@ def quintoC():
     
     print(f"La cantidad de niños de un año con posible desnutrición es: {cont}")
 
-quintoC()
+#5d
+def quintoD():
+    while True:
+        letra = input("Quiere continuar? (S/N): ")
+        if letra == "S" or letra == "s":
+            quintoD()
+        elif letra == "N" or letra == "n":
+            quit()
+        else:
+            print("Valor incorrecto, debe ser \'S\' o \'N\', intente de nuevo")
+            quintoD()
+
+#5e
+def quintoE():
+    suma, i = 0, 0
+    while i < 100:
+        print (i)
+        suma += i
+        i += 1
+    print (f" Promedio : {suma / (i - 1)}")
+
+
